@@ -93,7 +93,7 @@ function changePhoto2 () {
 photo2.addEventListener('wheel', changePhoto2);
 
 
-// DOUBLE CLICK
+// 9) DOUBLE CLICK
 
 const photo3 = document.querySelector('.inverse-content .img-content img');
 
@@ -103,3 +103,13 @@ function changePhoto3 () {
 
 document.addEventListener('dblclick', changePhoto3);
 console.log(photo3);
+
+// 10) KEYDOWN
+
+const photo4 = document.querySelector('.content-destination img');
+
+function changePhoto4 () {
+    photo4.src = 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGFkdmVudHVyZSUyMGF3YWl0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60';
+}
+
+document.addEventListener('keydown', changePhoto4);
