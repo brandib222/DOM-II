@@ -60,13 +60,36 @@ function changeBusAgain () {
 document.addEventListener('scroll', changeBusAgain);
 
 // 6) ON COPY
-const paras = document.querySelectorAll('p');
+const paras = document.querySelectorAll ('p');
 
 function paraCaps () {
     paras.forEach(function(para) {
-        para.textContent = 'NICE TRY BUDDY';
+        para.textContent = 'NICE TRY BUDDY';f
     })
    
 }
 
 document.addEventListener('copy', paraCaps);
+
+// 7) LOAD
+//const letsGo = document.querySelector('h2');
+
+//function loaded () {
+ //  letsGo.insertAdjacentText('afterbegin', 'Holy Whack-a-mole,');
+//}
+
+//letsGo.addEventListener('load', loaded);
+
+//console.log(letsGo);
+
+// 8) WHEEL
+
+const photo2 = document.querySelector('.img-content img');
+
+function changePhoto2 () {
+    photo2.src = 'https://images.unsplash.com/photo-1623584973952-182bcb43b8ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60';
+}
+
+photo2.addEventListener('wheel', changePhoto2);
+console.log(photo1);
+console.log(photo2);
