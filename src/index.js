@@ -38,7 +38,7 @@ function changePhotoAgain () {
 }
 photo1.addEventListener('mouseout', changePhotoAgain);
 
-// 4) DOUBLE CLICK
+// 4) KEYPRESS
 
 // grab the thing
 const funBus = document.querySelector('h1');
@@ -48,7 +48,7 @@ function changeBus () {
     funBus.textContent = 'CLACKETY CLACK';
 }
 
-// event listen
+// event listener
 document.addEventListener('keypress', changeBus);
 
 // 5) SCROLL
@@ -71,14 +71,14 @@ function paraCaps () {
 
 document.addEventListener('copy', paraCaps);
 
-// 7) LOAD
-//const letsGo = document.querySelector('h2');
+// 7) MOUSEMOVE
+const letsGo = document.querySelector('.text-content h2');
 
-//function loaded () {
- //  letsGo.insertAdjacentText('afterbegin', 'Holy Whack-a-mole,');
-//}
+function moved () {
+   letsGo.textContent = 'So many changes';
+}
 
-//letsGo.addEventListener('load', loaded);
+document.addEventListener('mousemove', moved);
 
 //console.log(letsGo);
 
@@ -91,5 +91,15 @@ function changePhoto2 () {
 }
 
 photo2.addEventListener('wheel', changePhoto2);
-console.log(photo1);
-console.log(photo2);
+
+
+// DOUBLE CLICK
+
+const photo3 = document.querySelector('.inverse-content .img-content img');
+
+function changePhoto3 () {
+    photo3.src = 'https://images.unsplash.com/photo-1549937914-1296ee55f271?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YWR2ZW50dXJlJTIwYXdhaXRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60';
+}
+
+document.addEventListener('dblclick', changePhoto3);
+console.log(photo3);
